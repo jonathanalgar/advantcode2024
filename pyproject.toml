@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "advantcode2024"
+version = "0.1"
+description = ""
+authors = ["ja"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+pytest-cov = "^4.1.0"
+isort = "^5.12.0"
+mypy =  "^1.9.0"
+black = "^24.3.0"
+flake8 = "^6.0.0"
+flake8-isort = "^6.0.0"
+flake8-docstrings = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+show_error_codes = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+exclude = ".venv"
+namespace_packages = true
+explicit_package_bases = true
+ignore_missing_imports = true
+
+[tool.coverage.report]
+include_namespace_packages = true
+skip_empty = true
